@@ -17,11 +17,14 @@ function recursiveFn(arr, left, right, target) {
 }
 
 function search(arr, target) {
-  //option 1
   return recursiveFn(arr, 0, arr.length - 1, target);
+}
 
-  //option 2
-  /*
+console.log(search([1, 2, 3, 4, 5, 6], 4)); //3
+
+console.log(search([1, 2, 3, 4, 5, 6], 4)); //3
+
+function searchLoop(arr, target) {
   //two pointers, min = 0, max = last
   let left = 0;
   let right = arr.length - 1;
@@ -45,7 +48,6 @@ function search(arr, target) {
 
   //return -1
   return -1;
-  */
 }
 
-console.log(search([1, 2, 3, 4, 5, 6], 9)); //3
+console.log(searchLoop([1, 2, 3, 4, 5, 6], 9)); //3
