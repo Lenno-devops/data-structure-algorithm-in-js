@@ -50,7 +50,7 @@ console.log(searchInsert([1, 3, 5, 6], 7)); //4
 */
 
 //option 3 - linear
-//Time: O(n), Space:(1)
+// Time: O(n), Space:(1)
 var searchInsert = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     if (target <= nums[i]) return i;

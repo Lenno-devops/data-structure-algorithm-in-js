@@ -22,10 +22,7 @@ var findDisappearedNumbers = function (nums) {
 //Time: O(N + N) = O(N), Space: O(N)
 var findDisappearedNumbers = function (nums) {
   let res = [];
-  let set = new Set();
-  for (let num of nums) {
-    set.add(num);
-  }
+  let set = new Set(nums);
 
   for (let i = 0; i < nums.length; i++) {
     if (!set.has(i + 1)) {

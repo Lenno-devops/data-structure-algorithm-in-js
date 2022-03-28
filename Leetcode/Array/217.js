@@ -1,19 +1,13 @@
-/*
 //option 1 - set, compare legnth vs size
 //Time: O(n), Space: O(N)
 var containsDuplicate = function (nums) {
-  const hashSet = new Set();
-  for (val of nums) {
-    hashSet.add(val);
-  }
-
+  const hashSet = new Set(nums);
   return nums.length !== hashSet.size;
 };
 
 console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])); //true
 console.log(containsDuplicate([1, 2, 3, 4])); //false
 console.log(containsDuplicate([1, 2, 3, 1])); //true
-*/
 
 /*
 //option 2 - sort, check i === i+1
@@ -33,6 +27,7 @@ console.log(containsDuplicate([1, 2, 3, 4])); //false
 console.log(containsDuplicate([1, 2, 3, 1])); //true
 */
 
+/*
 //option 3 - map
 //Time: O(n), Space: O(n)
 var containsDuplicate = function (nums) {
@@ -47,3 +42,4 @@ var containsDuplicate = function (nums) {
 console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])); //true
 console.log(containsDuplicate([1, 2, 3, 4])); //false
 console.log(containsDuplicate([1, 2, 3, 1])); //true
+*/
