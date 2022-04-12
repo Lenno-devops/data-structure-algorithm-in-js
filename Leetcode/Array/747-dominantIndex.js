@@ -1,12 +1,13 @@
 var dominantIndex = function (nums) {
   //option 1 - one pass with 2 var, max, secMax
   //Time: O(n), Sapce: O(1)
-  /*
+
   let max = Number.MIN_SAFE_INTEGER;
   let secMax = Number.MIN_SAFE_INTEGER;
   let maxIdx = -1;
 
   for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === max || nums[i] === secMax) continue;
     //if current val > max
     if (nums[i] > max) {
       //copy max into second max
@@ -22,10 +23,15 @@ var dominantIndex = function (nums) {
   }
 
   return secMax <= max / 2 ? maxIdx : -1;
-  */
+};
 
+console.log(dominantIndex([3, 6, 1, 0])); //1
+console.log(dominantIndex([1, 2, 3, 4])); //-1
+console.log(dominantIndex([1])); //0
+/*
   //option 2 - two pass, 1st find highest, 2nd compare all values * 2 > max
   //Time: O(n + n) = O(n), Space: O(1)
+  var dominantIndex = function (nums) {
   let max = Number.MIN_SAFE_INTEGER;
   let maxIdx = -1;
 
@@ -52,3 +58,4 @@ var dominantIndex = function (nums) {
 console.log(dominantIndex([3, 6, 1, 0])); //1
 console.log(dominantIndex([1, 2, 3, 4])); //-1
 console.log(dominantIndex([1])); //0
+*/

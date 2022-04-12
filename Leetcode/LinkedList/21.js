@@ -1,4 +1,4 @@
-const Node = require("./Node");
+const { Node, ListNode } = require("./Node");
 const LinkedList = require("./LinkedList");
 function convertLLToArr(head) {
   let arr = [];
@@ -12,7 +12,7 @@ function convertLLToArr(head) {
 //option 1 -
 //Time: , Space:
 var mergeTwoLists = function (list1, list2) {
-  let head = { next: null };
+  let head = new ListNode();
 
   let curr = head;
   while (list1 && list2) {

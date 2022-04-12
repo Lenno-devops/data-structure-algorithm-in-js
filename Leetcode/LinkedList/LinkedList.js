@@ -1,12 +1,14 @@
-const Node = require("./Node");
+const { Node } = require("./Node");
 class LinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
   }
   unshift(data) {
-    this.head = new Node(data, this.head);
+    let newNode = new Node(data, this.head);
+    this.head = newNode;
     this.length++;
+    return newNode;
   }
   getLast() {
     let node = this.head;
@@ -19,8 +21,10 @@ class LinkedList {
     if (!this.head) {
       return this.unshift(data);
     }
-    this.getLast().next = new Node(data);
+    let newNode = new Node(data);
+    this.getLast().next = newNode;
     this.length++;
+    return newNode;
   }
 }
 

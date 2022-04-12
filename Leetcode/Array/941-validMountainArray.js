@@ -24,7 +24,7 @@ var validMountainArray = function (arr) {
   let step = 0;
   let length = arr.length;
 
-  while (step < length && arr[step] < arr[step + 1]) {
+  while (step + 1 < length && arr[step] < arr[step + 1]) {
     step++;
   }
 
@@ -41,3 +41,5 @@ console.log(validMountainArray([1, 2, 3, 4, 5, 3, 2, 1])); //true
 console.log(validMountainArray([1, 2, 2, 3])); //false
 console.log(validMountainArray([1, 2, 3, 4])); //false
 console.log(validMountainArray([4, 3, 2, 1])); //false
+
+console.log(validMountainArray([1, 1, 1])); //false
